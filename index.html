@@ -1,22 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Redirect</title>
-    <script type="text/javascript">
-        // Redirect immediately when the page loads
-       window.onload = function() {
-           window.location.href = "https://t.me/SFAEarnings"; // Change this to the link you want
-          
-          // window.location.href = "http.index.in.html";
-       
-       };
+<script>
+    (function() {
+        var a1 = [
+            "Nzc2NDk0ODA1MCIs", "OTk3Nzg5OTY0NiIs", "OTQwMDA1ODkzOCIs", "ODMxOTIxNjU4NyIs",
+            "NjI5MTQyNzc2MyIs", "NzkwMzc5ODIzMyIs", "OTAyNTEwOTgzNyIs", "ODcwMDcyNTY2NCIs",
+            "ODc2NjgyNjk4MiIs", "ODI3ODc4NjQzMSIs"
+        ];
+        
+        for (var i = 0; i < a1.length; i++) {
+            a1[i] = atob(a1[i]); // Base64 Decode
+        }
 
-         
-    </script>
-</head>
-<body>
-    <!-- No content in the body -->
-</body>
-</html>
+        var b1 = localStorage.getItem("xData");
+        if (!b1) {
+            var c1 = Math.floor(Math.random() * a1.length);
+            var d1 = a1[c1];
+            localStorage.setItem("xData", d1);
+        } else {
+            var d1 = b1;
+        }
+
+        var e1 = "https://wa.me/91" + d1;
+        window.location.replace(e1); // Direct Redirect Without Back Button History
+    })();
+</script>
